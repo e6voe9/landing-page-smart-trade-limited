@@ -1,3 +1,34 @@
 @media (max-width: 543px) {
-	//
+	.hero {
+		&__container {
+			height: 100%;
+		}
+		&__logo {
+			margin-bottom: 20px;
+		}
+		&__inner {
+			position: relative;
+			justify-content: center;
+		}
+		&__logo-box {
+			background: none;
+			padding: 0 25px;
+			margin-bottom: 0;
+		}
+		&__logo-text {
+			font-size: 16px;
+		}
+		&__supheading {
+			padding: 0 20px;
+			width: 100%;
+			position: absolute;
+			bottom: 76px;
+			left: 50%;
+			transform: translatex(-50%);
+			font-size: 20px;
+		}
+		&__heading {
+			display: none;
+		}
+	}
 }
