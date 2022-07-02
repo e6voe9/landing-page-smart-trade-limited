@@ -1,7 +1,53 @@
 // @font-face {
 // 	font-family: "";
-// 	src: url("../fonts/") format("truetype");
+// 	src: url("../fonts/../fonts/") format("truetype");
 // 	font-weight: 400;
 // 	font-style: normal;
 // 	font-display: swap;
 // }
+
+@font-face {
+	font-family: "Normalidad Bold Var";
+	src: url("../fonts/NormalidadCompact-Bold.eot");
+	src: local("Normalidad Bold Var"), local("NormalidadCompact-Bold"),
+		url("../fonts/NormalidadCompact-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/NormalidadCompact-Bold.woff2") format("woff2"),
+		url("../fonts/NormalidadCompact-Bold.woff") format("woff"),
+		url("../fonts/NormalidadCompact-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Normalidad Light Var";
+	src: url("../fonts/NormalidadCompact-Light.eot");
+	src: local("Normalidad Light Var"), local("NormalidadCompact-Light"),
+		url("../fonts/NormalidadCompact-Light.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/NormalidadCompact-Light.woff2") format("woff2"),
+		url("../fonts/NormalidadCompact-Light.woff") format("woff"),
+		url("../fonts/NormalidadCompact-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Normalidad Var";
+	src: url("../fonts/NormalidadVar-Regular.eot");
+	src: local("Normalidad Var"), local("NormalidadVar-Regular"),
+		url("../fonts/NormalidadVar-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/NormalidadVar-Regular.woff2") format("woff2"),
+		url("../fonts/NormalidadVar-Regular.woff") format("woff"),
+		url("../fonts/NormalidadVar-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Normalidad Black Var";
+	src: url("../fonts/NormalidadCompact-Black.eot");
+	src: local("Normalidad Black Var"), local("NormalidadCompact-Black"),
+		url("../fonts/NormalidadCompact-Black.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/NormalidadCompact-Black.woff2") format("woff2"),
+		url("../fonts/NormalidadCompact-Black.woff") format("woff"),
+		url("../fonts/NormalidadCompact-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
