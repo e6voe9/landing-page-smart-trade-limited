@@ -3,3 +3,122 @@
 	max-width: 1160px;
 	padding: 0 10px;
 }
+
+.fullpage-swiper {
+	width: 100%;
+	height: 100vh;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&::-webkit-scrollbar {
+		width: 0px;
+		background: transparent;
+	}
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	&__item {
+		overflow-y: auto;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: start;
+		scroll-snap-stop: always;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		&::-webkit-scrollbar {
+			width: 0px;
+			background: transparent;
+		}
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+
+		&--height-auto {
+			height: auto;
+		}
+	}
+}
+
+.hero {
+	width: 100%;
+	height: 100%;
+	background: url("../media/images/hero__background.png") no-repeat;
+	background-position: top center;
+	background: cover;
+	&__container {
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__logo-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 480px;
+		background: rgba(255, 255, 255, 0.25);
+		padding: 223px 45px 53px 39px;
+		margin-bottom: 38px;
+	}
+
+	&__logo {
+		width: 277px;
+		margin-bottom: 23px;
+	}
+
+	&__logo-text {
+		text-align: center;
+		color: #fff;
+		font-size: 20px;
+		line-height: 1.5;
+		font-family: "Jost", sans-serif;
+		text-transform: uppercase;
+	}
+
+	&__supheading {
+		font-size: 32px;
+		line-height: 1.32;
+		text-align: center;
+		color: #fff;
+		font-weight: 400;
+		font-family: "Normalidad Var";
+		text-transform: uppercase;
+	}
+
+	&__heading {
+		font-family: "Normalidad Black Var";
+		font-weight: 900;
+		font-size: 53px;
+		line-height: 1.32;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #fff;
+	}
+}
+
+.footer {
+	background: #000;
+	&__inner {
+		padding: 70px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text {
+		color: #fff;
+		text-align: center;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.32;
+	}
+}
