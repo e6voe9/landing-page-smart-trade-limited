@@ -101,4 +101,16 @@
 			display: none;
 		}
 	}
+	.roadmap {
+		padding: 90px 20px 0 20px;
+		margin: 0 auto;
+
+		&__item {
+			padding-bottom: 10px;
+
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+		}
+	}
 }

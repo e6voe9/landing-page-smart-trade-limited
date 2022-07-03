@@ -50,4 +50,24 @@
 			font-size: 14px;
 		}
 	}
+
+	.roadmap {
+		&__number-box {
+			padding: 3px 2px;
+			margin-right: 20px;
+		}
+		&__number {
+			font-size: 12px;
+			line-height: 15px;
+		}
+
+		&__number-text {
+			font-size: 12px;
+			line-height: 15px;
+		}
+
+		&__text {
+			font-size: 14px;
+		}
+	}
 }
