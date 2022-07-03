@@ -542,6 +542,109 @@
 	}
 }
 
+.contacts {
+	margin: 40px 0;
+	width: 100%;
+	max-width: 795px;
+	margin-right: 304px;
+	&__info {
+		&:not(:last-child) {
+			margin-bottom: 122px;
+		}
+	}
+
+	&__heading {
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: 700;
+		font-family: "Normalidad Bold Var";
+		padding-bottom: 13px;
+		border-bottom: 1px solid #000;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 34px;
+		transition: color 200ms ease-in-out;
+
+		&:hover {
+			color: #2269fe;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__icon {
+		width: 26px;
+		margin-right: 16px;
+	}
+
+	&__form {
+	}
+}
+.form {
+	width: 100%;
+	max-width: 528px;
+	display: flex;
+	flex-direction: column;
+	&__label {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__name {
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 300;
+	}
+
+	&__input {
+		font-size: 14px;
+		line-height: 19px;
+		padding: 13px;
+		border: 1px solid #d2d4d9;
+
+		transition: border 400ms ease-in-out;
+
+		&:hover,
+		&:focus {
+			border-color: #2269fe;
+		}
+	}
+
+	&__button {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 19px;
+		text-transform: uppercase;
+		text-align: center;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: 16px 32px;
+		background: #2269fe;
+		color: #fff;
+		border: 1px solid #2269fe;
+		transition: color 400ms ease-in-out, background 400ms ease-in-out;
+
+		&:hover {
+			background: #fff;
+			color: #2269fe;
+		}
+	}
+}
+
 .footer {
 	width: 100%;
 	background: #000;

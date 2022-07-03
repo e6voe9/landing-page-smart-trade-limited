@@ -120,4 +120,20 @@
 	.demo {
 		margin-top: 90px;
 	}
+	.contacts {
+		margin: 0 auto;
+		padding: 90px 20px;
+
+		&__info {
+			&:not(:last-child) {
+				margin-bottom: 65px;
+			}
+		}
+
+		&__link {
+			&:not(:last-child) {
+				margin-bottom: 35px;
+			}
+		}
+	}
 }
