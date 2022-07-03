@@ -43,6 +43,10 @@
 		&--height-auto {
 			height: auto;
 		}
+
+		&--aifs {
+			align-items: flex-start;
+		}
 	}
 }
 
@@ -323,6 +327,124 @@
 	&__text {
 		font-size: 16px;
 		line-height: 24px;
+	}
+}
+
+.faq {
+	width: 100%;
+	max-width: 788px;
+	margin: 90px 0;
+	margin-right: 379px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__item {
+		width: 100%;
+	}
+}
+.faq-item {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__head {
+		padding-top: 40px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&:hover {
+			+ .faq-item__body {
+				border-bottom: 1px solid #266dfe;
+			}
+			.faq-item {
+				&__heading {
+					color: #2269fe;
+				}
+				&__icon-box {
+					&::before {
+						opacity: 1;
+					}
+				}
+				&__icon {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+		}
+
+		&--active {
+			.faq-item {
+				&__icon-box {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+
+	&__heading {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 21px;
+		font-family: "Normalidad Bold Var";
+		transition: color 400ms ease-in-out;
+	}
+
+	&__icon-box {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		isolation: isolate;
+		position: relative;
+		transition: transform 400ms ease-in-out;
+
+		&::before {
+			content: "";
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			background: linear-gradient(42.06deg, #266dfe 4.94%, #96b8ff 86.4%);
+			opacity: 0;
+			transition: opacity 400ms ease-in-out;
+			z-index: 1;
+			pointer-events: none;
+		}
+	}
+
+	&__icon {
+		z-index: 2;
+		width: 15px;
+		height: 24px;
+
+		path {
+			fill: #000;
+			transition: fill 400ms ease-in-out;
+		}
+	}
+
+	&__body {
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		transition: height 400ms ease-in-out, border 400ms ease-in-out;
+		border-bottom: 1px solid #000;
+	}
+
+	&__content {
+		width: 100%;
+		padding: 12px 0;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		max-width: 634px;
 	}
 }
 

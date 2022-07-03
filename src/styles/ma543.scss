@@ -70,4 +70,19 @@
 			font-size: 14px;
 		}
 	}
+	.faq-item {
+		&__heading {
+			text-align: left;
+		}
+		&__icon-box {
+			min-width: 40px;
+			max-width: 40px;
+			min-height: 40px;
+			max-height: 40px;
+		}
+		&__icon {
+			width: 12px;
+			height: 19px;
+		}
+	}
 }

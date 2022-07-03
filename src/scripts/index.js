@@ -45,3 +45,28 @@ if (videoBlocks.length !== 0) {
     btn.addEventListener("click", handleBtnClick);
   });
 }
+
+const faqs = document.querySelectorAll(".faq-item");
+
+if (faqs.length !== 0) {
+  faqs.forEach((faq) => {
+    const head = faq.querySelector(".faq-item__head"),
+      body = faq.querySelector(".faq-item__body");
+
+    let isOpen = false;
+
+    const clickHandler = () => {
+      if (isOpen) {
+        head.classList.remove("faq-item__head--active");
+        body.style.height = 0;
+        isOpen = !isOpen;
+      } else {
+        head.classList.add("faq-item__head--active");
+        body.style.height = body.scrollHeight + "px";
+        isOpen = !isOpen;
+      }
+    };
+
+    head.addEventListener("click", clickHandler);
+  });
+}
