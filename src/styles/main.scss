@@ -21,6 +21,9 @@
 	scrollbar-width: none;
 
 	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
 		overflow-y: auto;
 		width: 100%;
 		height: 100%;
@@ -106,7 +109,70 @@
 	}
 }
 
+// TODO: make .video-block__button--hidden animation
+
+.video-block {
+	max-height: 615px;
+	width: 100%;
+	max-width: 1086px;
+	position: relative;
+	&__heading {
+		position: absolute;
+		bottom: 97px;
+		left: 45px;
+		max-width: 545px;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 700;
+		font-family: "Normalidad Bold Var", sans-serif;
+		color: #fff;
+		text-transform: uppercase;
+		z-index: 2;
+	}
+
+	&__text {
+		position: absolute;
+		bottom: 17px;
+		left: 45px;
+		max-width: 562px;
+		font-size: 16px;
+		line-height: 18px;
+		color: #fff;
+		z-index: 2;
+	}
+
+	&__video-box {
+		position: relative;
+	}
+
+	&__video {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__button {
+		width: 79px;
+		height: 79px;
+		position: absolute;
+		z-index: 2;
+		bottom: 78px;
+		right: 339px;
+		transition: opacity 400ms ease-in-out;
+		&--hidden {
+			pointer-events: none;
+			opacity: 0;
+		}
+	}
+
+	&__button-icon {
+	}
+}
+
 .footer {
+	width: 100%;
 	background: #000;
 	&__inner {
 		padding: 70px 0;

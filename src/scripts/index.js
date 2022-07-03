@@ -28,3 +28,20 @@ if (process.env.NODE_ENV === "development") {
 // images.forEach(img => {
 // 	observer.observe(img);
 // })
+
+const videoBlocks = document.querySelectorAll(".video-block");
+
+if (videoBlocks.length !== 0) {
+  videoBlocks.forEach((videoBlock) => {
+    const btn = videoBlock.querySelector(".video-block__button"),
+      video = videoBlock.querySelector(".video-block__video");
+
+    const handleBtnClick = () => {
+      video.play();
+      video.controls = true;
+      btn.classList.add("video-block__button--hidden");
+    };
+
+    btn.addEventListener("click", handleBtnClick);
+  });
+}

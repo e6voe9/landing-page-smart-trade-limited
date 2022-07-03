@@ -1,2 +1,17 @@
 @media (max-width: 1200px) {
+	.video-block {
+		padding: 0 20px;
+		max-height: auto;
+		&__heading,
+		&__text {
+			position: static;
+			color: #000;
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+		&__button {
+			bottom: 19px;
+			right: 19px;
+		}
+	}
 }
