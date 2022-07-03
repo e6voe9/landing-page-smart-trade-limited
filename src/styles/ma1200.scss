@@ -8,7 +8,7 @@
 		height: 100%;
 		margin-right: 0;
 		padding: 0 20px;
-		max-height: auto;
+		max-height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -32,6 +32,73 @@
 
 		&__text {
 			padding: 20px 0;
+		}
+	}
+	.mission {
+		margin-top: 90px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&__mobile-block {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 20px;
+		}
+
+		&__mob-bg {
+		}
+		&__mob-blockquote {
+			position: absolute;
+			top: 246px;
+			left: 20px;
+			font-weight: 300;
+			font-size: 24px;
+			line-height: 32px;
+			color: #f5f5f5;
+			font-family: "Normalidad Light Var";
+			max-width: 335px;
+		}
+		&__mob-text-inner {
+			text-align: right;
+			position: absolute;
+			bottom: 19px;
+			right: 20px;
+			color: #fff;
+			font-size: 14px;
+			line-height: 20px;
+			font-family: "Jost", sans-serif;
+		}
+
+		&__background-img {
+			display: none;
+		}
+
+		&__blockquote {
+			display: none;
+		}
+
+		&__text-box {
+			background: none;
+			transform: translateX(0);
+			padding: 0 20px;
+		}
+
+		&__heading {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+		&__text {
+			font-size: 14px;
+		}
+		&__text-inner {
+			display: none;
+		}
+
+		&__signature {
+			display: none;
 		}
 	}
 }
