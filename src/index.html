@@ -16,12 +16,23 @@
   <body>
     <div id="root">
       <div class="fullpage-swiper">
+        <aside class="sidebar-nav">
+          <div class="sidebar-nav__inner">
+            <a href="#video" class="sidebar-nav__item">О нас</a>
+            <a href="#advantages" class="sidebar-nav__item">Преимущества</a>
+            <a href="#mission" class="sidebar-nav__item">Миссия</a>
+            <a href="#roadmap" class="sidebar-nav__item">Дорожная карта</a>
+            <a href="#faq" class="sidebar-nav__item">FAQ</a>
+            <a href="#demo" class="sidebar-nav__item">Демо</a>
+            <a href="#contacts" class="sidebar-nav__item">Контакты</a>
+          </div>
+        </aside>
         <div class="fullpage-swiper__item">
           <div class="hero">
             <div class="hero__container">
               <div class="hero__inner">
                 <div class="hero__logo-box">
-                  <img src="./media/images/logo.svg" alt="logo" width="277" height="104" class="hero__logo" />
+                  <img data-aos="flip-up" src="./media/images/logo.svg" alt="logo" width="277" height="104" class="hero__logo" />
                   <p class="hero__logo-text">Международный инвестиционный фонд с интеллектуальным торговым ботом</p>
                 </div>
                 <p class="hero__supheading">Вместе мы заработаем больше</p>
@@ -30,7 +41,7 @@
             </div>
           </div>
         </div>
-        <div class="fullpage-swiper__item">
+        <div class="fullpage-swiper__item" id="video">
           <div class="video-block">
             <h2 class="video-block__heading">Мы подготовили для вас видео-презентацию на 60 секунд.</h2>
             <p class="video-block__text">Постарались без пафоса и воды, все по существу. Надеемся, что информация в ролике будет стоить вашего времени на просмотр.</p>
@@ -42,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div class="fullpage-swiper__item">
+        <div class="fullpage-swiper__item" id="advantages">
           <div class="advantages">
             <div class="advantages__item">
               <h3 class="advantages__heading">Высокий профит</h3>
@@ -70,7 +81,7 @@
             </div>
           </div>
         </div>
-        <div class="fullpage-swiper__item">
+        <div class="fullpage-swiper__item" id="mission">
           <div class="mission">
             <div class="mission__mobile-block">
               <img src="./media/images/mission__bg--mobile.png" alt="our mission" width="375" height="421" class="mission__mob-bg" />
@@ -92,7 +103,7 @@
             </div>
           </div>
         </div>
-        <div class="fullpage-swiper__item">
+        <div class="fullpage-swiper__item" id="roadmap">
           <div class="roadmap">
             <div class="roadmap__item">
               <div class="roadmap__number-box roadmap__number-box--active">
@@ -136,7 +147,7 @@
             </div>
           </div>
         </div>
-        <div class="fullpage-swiper__item fullpage-swiper__item--aifs">
+        <div class="fullpage-swiper__item fullpage-swiper__item--aifs" id="faq">
           <div class="faq">
             <div class="faq__item faq-item">
               <button class="faq-item__head">
@@ -440,7 +451,7 @@
             </div>
           </div>
         </div>
-        <div class="fullpage-swiper__item fullpage-swiper__item--aifs">
+        <div class="fullpage-swiper__item fullpage-swiper__item--aifs" id="demo">
           <div class="demo">
             <div class="demo__text-box">
               <h2 class="demo__heading">В отличие от большинства инвестиционных платформ мы не скрываем тонкостей своей работы и не являемся черным ящиком.</h2>
@@ -479,7 +490,7 @@
             </div>
           </div>
         </div>
-        <div class="fullpage-swiper__item">
+        <div class="fullpage-swiper__item" id="contacts">
           <div class="contacts">
             <div class="contacts__info">
               <h2 class="contacts__heading">Будем рады сотрудничеству.<br />Мы всегда на связи!</h2>
