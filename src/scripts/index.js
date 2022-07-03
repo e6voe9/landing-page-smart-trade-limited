@@ -1,5 +1,29 @@
 import "./../styles/index.scss";
 
+import Swiper, { Navigation, Pagination, EffectCoverflow } from "swiper";
+// import Swiper and modules styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// init Swiper:
+const demoSwiperBlock = document.querySelector("#demoSwiper");
+const swiper = new Swiper(demoSwiperBlock, {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination, EffectCoverflow],
+  effect: "coverflow",
+  slidePerView: 1,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".demo__arrow-right",
+    prevEl: ".demo__arrow-left",
+  },
+});
+
 if (process.env.NODE_ENV === "development") {
   require("../index.html");
 }
