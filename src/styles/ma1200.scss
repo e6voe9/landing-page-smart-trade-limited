@@ -1,7 +1,17 @@
 @media (max-width: 1200px) {
+	.fullpage-swiper {
+		&__item {
+			align-items: flex-start;
+		}
+	}
 	.video-block {
+		height: 100%;
+		margin-right: 0;
 		padding: 0 20px;
 		max-height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		&__heading,
 		&__text {
 			position: static;
@@ -12,6 +22,16 @@
 		&__button {
 			bottom: 19px;
 			right: 19px;
+		}
+	}
+	.advantages {
+		padding: 90px 20px 0 20px;
+		margin-right: 0;
+		grid-template-columns: 1fr;
+		grid-gap: 30px;
+
+		&__text {
+			padding: 20px 0;
 		}
 	}
 }

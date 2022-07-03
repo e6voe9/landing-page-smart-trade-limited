@@ -116,6 +116,7 @@
 	width: 100%;
 	max-width: 1086px;
 	position: relative;
+	margin-right: 78px;
 	&__heading {
 		position: absolute;
 		bottom: 97px;
@@ -168,6 +169,39 @@
 	}
 
 	&__button-icon {
+	}
+}
+
+.advantages {
+	width: 100%;
+	max-width: 1008px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 80px 113px;
+	margin-right: 160px;
+	&__item {
+	}
+
+	&__heading {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		padding: 11px 20px;
+		border-bottom: 1px solid #000;
+		font-family: "Normalidad Bold Var";
+
+		&--active {
+			color: #fff;
+			border: none;
+			background: linear-gradient(90.37deg, #86acfa 9.13%, #2269fe 85.7%);
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		padding: 20px;
 	}
 }
 
