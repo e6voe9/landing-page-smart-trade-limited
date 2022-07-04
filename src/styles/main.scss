@@ -258,6 +258,26 @@
 	}
 }
 
+.mob-sidebar-nav {
+	display: none;
+	&__inner {
+	}
+
+	&__main {
+	}
+
+	&__burger {
+	}
+}
+.burger {
+	display: none;
+	&__inner {
+	}
+
+	&__item {
+	}
+}
+
 .advantages {
 	width: 100%;
 	max-width: 52.5vw;

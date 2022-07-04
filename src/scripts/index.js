@@ -108,6 +108,10 @@ const contacts = document.querySelector("#contacts");
 const fullPageSwiper = document.querySelector(".fullpage-swiper");
 const sidebarNavItems = document.querySelectorAll(".sidebar-nav__item");
 const sidebarNav = document.querySelector(".sidebar-nav");
+const activeSidebarMenuNameBlock = document.querySelector(".mob-sidebar-nav__main");
+const burger = document.querySelector(".burger");
+let isMenuOpened = false;
+let activeMenuIdx = 0;
 
 function getBodyScrollTop() {
   return fullPageSwiper.scrollTop;
@@ -142,9 +146,16 @@ if (video && advantages && mission && roadmap && faq && demo && contacts && side
       const min = Math.min(hy, vy, ay, my, ry, fy, dy, cy);
 
       const idx = arr.indexOf(min);
+      activeMenuIdx = idx;
       if (idx === 0) {
+        sidebarNavItems.forEach((el) => {
+          el.classList.remove("sidebar-nav__item--active");
+        });
         sidebarNav.classList.add("sidebar-nav--hidden");
+        activeSidebarMenuNameBlock.style.opacity = 0;
+        burger.classList.add("burger--white");
       } else {
+        burger.classList.remove("burger--white");
         sidebarNav.classList.remove("sidebar-nav--hidden");
         const shouldChangeActiveItem = !sidebarNavItems[idx - 1].classList.contains("sidebar-nav__item--active");
 
@@ -153,9 +164,36 @@ if (video && advantages && mission && roadmap && faq && demo && contacts && side
             el.classList.remove("sidebar-nav__item--active");
           });
           sidebarNavItems[idx - 1].classList.add("sidebar-nav__item--active");
+          activeSidebarMenuNameBlock.style.opacity = 1;
+          activeSidebarMenuNameBlock.textContent = sidebarNavItems[idx - 1].textContent;
         }
       }
     },
     { passive: true }
   );
 }
+
+const toggleBurger = () => {
+  burger.classList.toggle("burger--active");
+};
+
+const toggleSideBarNav = () => {
+  sidebarNav.classList.toggle("sidebar-nav--open");
+};
+
+const toggleMenu = () => {
+  toggleBurger();
+  toggleSideBarNav();
+  isMenuOpened = !isMenuOpened;
+
+  if (activeMenuIdx === 0 && isMenuOpened === true) {
+    burger.classList.remove("burger--white");
+  } else if (activeMenuIdx === 0 && isMenuOpened === false) {
+    burger.classList.add("burger--white");
+  }
+};
+
+burger.addEventListener("click", toggleMenu);
+sidebarNavItems.forEach((item) => {
+  item.addEventListener("click", toggleMenu);
+});
