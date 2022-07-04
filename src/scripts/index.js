@@ -58,12 +58,14 @@ const videoBlocks = document.querySelectorAll(".video-block");
 if (videoBlocks.length !== 0) {
   videoBlocks.forEach((videoBlock) => {
     const btn = videoBlock.querySelector(".video-block__button"),
-      video = videoBlock.querySelector(".video-block__video");
+      video = videoBlock.querySelector(".video-block__video"),
+      videoBox = videoBlock.querySelector(".video-block__video-box");
 
     const handleBtnClick = () => {
       video.play();
       video.controls = true;
       btn.classList.add("video-block__button--hidden");
+      videoBox.classList.add("video-block__video-box--active");
     };
 
     btn.addEventListener("click", handleBtnClick);
@@ -95,6 +97,7 @@ if (faqs.length !== 0) {
   });
 }
 
+const hero = document.querySelector("#hero");
 const video = document.querySelector("#video");
 const advantages = document.querySelector("#advantages");
 const mission = document.querySelector("#mission");
@@ -102,14 +105,16 @@ const roadmap = document.querySelector("#roadmap");
 const faq = document.querySelector("#faq");
 const demo = document.querySelector("#demo");
 const contacts = document.querySelector("#contacts");
-
+const fullPageSwiper = document.querySelector(".fullpage-swiper");
 const sidebarNavItems = document.querySelectorAll(".sidebar-nav__item");
+const sidebarNav = document.querySelector(".sidebar-nav");
 
 function getBodyScrollTop() {
-  return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
+  return fullPageSwiper.scrollTop;
 }
 
 if (video && advantages && mission && roadmap && faq && demo && contacts && sidebarNavItems.length !== 0) {
+  const h = hero.getBoundingClientRect().y;
   const v = video.getBoundingClientRect().y;
   const a = advantages.getBoundingClientRect().y;
   const m = mission.getBoundingClientRect().y;
@@ -118,30 +123,37 @@ if (video && advantages && mission && roadmap && faq && demo && contacts && side
   const d = demo.getBoundingClientRect().y;
   const c = contacts.getBoundingClientRect().y;
 
-  document.addEventListener(
+  fullPageSwiper.addEventListener(
     "scroll",
-    function () {
+    () => {
       const pageScrollTop = getBodyScrollTop();
 
+      const hy = Math.abs(h - pageScrollTop);
       const vy = Math.abs(v - pageScrollTop);
-      const ay = Math.abs(v - pageScrollTop);
-      const my = Math.abs(v - pageScrollTop);
-      const ry = Math.abs(v - pageScrollTop);
-      const fy = Math.abs(v - pageScrollTop);
-      const dy = Math.abs(v - pageScrollTop);
-      const cy = Math.abs(v - pageScrollTop);
+      const ay = Math.abs(a - pageScrollTop);
+      const my = Math.abs(m - pageScrollTop);
+      const ry = Math.abs(r - pageScrollTop);
+      const fy = Math.abs(f - pageScrollTop);
+      const dy = Math.abs(d - pageScrollTop);
+      const cy = Math.abs(c - pageScrollTop);
 
-      const arr = [vy, ay, my, ry, fy, dy, cy];
+      const arr = [hy, vy, ay, my, ry, fy, dy, cy];
 
-      const min = Math.min(vy, ay, my, ry, fy, dy, cy);
+      const min = Math.min(hy, vy, ay, my, ry, fy, dy, cy);
 
       const idx = arr.indexOf(min);
+      if (idx === 0) {
+        sidebarNav.classList.add("sidebar-nav--hidden");
+      } else {
+        sidebarNav.classList.remove("sidebar-nav--hidden");
+        const shouldChangeActiveItem = !sidebarNavItems[idx - 1].classList.contains("sidebar-nav__item--active");
 
-      if (!sidebarNavItems[idx].classList.contains("sidebar-nav__item--active")) {
-        sidebarNavItems.forEach((el) => {
-          el.classList.remove("sidebar-nav__item--active");
-        });
-        sidebarNavItems[idx].classList.add("sidebar-nav__item--active");
+        if (shouldChangeActiveItem) {
+          sidebarNavItems.forEach((el) => {
+            el.classList.remove("sidebar-nav__item--active");
+          });
+          sidebarNavItems[idx - 1].classList.add("sidebar-nav__item--active");
+        }
       }
     },
     { passive: true }

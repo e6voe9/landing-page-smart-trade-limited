@@ -46,6 +46,39 @@
 			font-size: 53px;
 		}
 	}
+	.sidebar-nav {
+		left: 192px;
+		&--hidden {
+		}
+		&__inner {
+			max-width: 306px;
+		}
+		&__item {
+			font-size: 20px;
+			line-height: 26px;
+			padding: 8px 30px;
+			&::after {
+				left: 14px;
+				width: 5px;
+				height: 5px;
+			}
+			&::before {
+				height: 1px;
+			}
+			&--active {
+				&::after {
+				}
+				&::before {
+				}
+			}
+			&:hover {
+				&::after {
+				}
+				&::before {
+				}
+			}
+		}
+	}
 	.video-block {
 		max-height: 615px;
 		max-width: 1086px;
@@ -65,6 +98,8 @@
 			line-height: 18px;
 		}
 		&__video-box {
+			&--active {
+			}
 		}
 		&__video {
 		}
