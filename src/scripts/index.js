@@ -109,6 +109,7 @@ const fullPageSwiper = document.querySelector(".fullpage-swiper");
 const sidebarNavItems = document.querySelectorAll(".sidebar-nav__item");
 const sidebarNav = document.querySelector(".sidebar-nav");
 const activeSidebarMenuNameBlock = document.querySelector(".mob-sidebar-nav__main");
+const mobSidebarNav = document.querySelector(".mob-sidebar-nav");
 const burger = document.querySelector(".burger");
 let isMenuOpened = false;
 let activeMenuIdx = 0;
@@ -154,7 +155,9 @@ if (video && advantages && mission && roadmap && faq && demo && contacts && side
         sidebarNav.classList.add("sidebar-nav--hidden");
         activeSidebarMenuNameBlock.style.opacity = 0;
         burger.classList.add("burger--white");
+        mobSidebarNav.classList.remove("mob-sidebar-nav--background-white");
       } else {
+        mobSidebarNav.classList.add("mob-sidebar-nav--background-white");
         burger.classList.remove("burger--white");
         sidebarNav.classList.remove("sidebar-nav--hidden");
         const shouldChangeActiveItem = !sidebarNavItems[idx - 1].classList.contains("sidebar-nav__item--active");

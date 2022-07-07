@@ -166,6 +166,12 @@
 		left: 0;
 		right: 0;
 		width: 100%;
+		transition: background 400ms ease-in-out;
+
+		&--background-white {
+			background: #fff;
+		}
+
 		&__inner {
 			padding: 25px 20px;
 			display: flex;
