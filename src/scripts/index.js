@@ -1,6 +1,6 @@
 import "./../styles/index.scss";
 
-import Swiper, { Navigation, Pagination, EffectCoverflow } from "swiper";
+import Swiper, { Navigation, Pagination, EffectCoverflow, Autoplay } from "swiper";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,10 +10,14 @@ import "swiper/css/pagination";
 const demoSwiperBlock = document.querySelector("#demoSwiper");
 const swiper = new Swiper(demoSwiperBlock, {
   // configure Swiper to use modules
-  modules: [Navigation, Pagination, EffectCoverflow],
+  modules: [Navigation, Pagination, EffectCoverflow, Autoplay],
   effect: "coverflow",
   slidePerView: 1,
   loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
