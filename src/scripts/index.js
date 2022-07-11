@@ -109,7 +109,6 @@ const roadmap = document.querySelector("#roadmap");
 const faq = document.querySelector("#faq");
 const demo = document.querySelector("#demo");
 const contacts = document.querySelector("#contacts");
-const fullPageSwiper = document.querySelector(".fullpage-swiper");
 const sidebarNavItems = document.querySelectorAll(".sidebar-nav__item");
 const sidebarNav = document.querySelector(".sidebar-nav");
 const activeSidebarMenuNameBlock = document.querySelector(".mob-sidebar-nav__main");
@@ -118,8 +117,16 @@ const burger = document.querySelector(".burger");
 let isMenuOpened = false;
 let activeMenuIdx = 0;
 
-function getBodyScrollTop() {
-  return fullPageSwiper.scrollTop;
+const widthOfTheScreen = window.innerWidth;
+let fullPageSwiper = null;
+let getBodyScrollTop = null;
+
+if (widthOfTheScreen < 768) {
+  fullPageSwiper = window;
+  getBodyScrollTop = () => fullPageSwiper.pageYOffset;
+} else {
+  fullPageSwiper = document.querySelector(".fullpage-swiper");
+  getBodyScrollTop = () => fullPageSwiper.scrollTop;
 }
 
 if (video && advantages && mission && roadmap && faq && demo && contacts && sidebarNavItems.length !== 0) {

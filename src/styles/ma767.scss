@@ -1,4 +1,24 @@
 @media (max-width: 767px) {
+	.fullpage-swiper {
+		height: 100%;
+		overflow-y: auto;
+		scroll-snap-type: none;
+
+		&__item {
+			height: auto;
+			scroll-snap-align: none;
+			scroll-snap-stop: none;
+		}
+	}
+	.hero {
+		height: 100vh;
+		&__inner {
+			padding: 150px 0 150px 0;
+		}
+	}
+	.video-block {
+		padding: 90px 20px 0 20px;
+	}
 	.demo {
 		padding: 40px 20px;
 		&__text-box {
