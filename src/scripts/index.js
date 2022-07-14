@@ -13,6 +13,7 @@ const swiper = new Swiper(demoSwiperBlock, {
   modules: [Navigation, Pagination, EffectCoverflow, Autoplay],
   effect: "coverflow",
   slidePerView: 1,
+  speed: 1000,
   loop: true,
   autoplay: {
     delay: 2500,
