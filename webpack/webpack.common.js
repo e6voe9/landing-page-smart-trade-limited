@@ -96,5 +96,11 @@ module.exports = {
       minify: false,
       inject: "body",
     }),
+    new HtmlWebpackPlugin({
+      filename: "en.html",
+      template: Path.resolve(__dirname, "../src/en.html"),
+      minify: false,
+      inject: "body",
+    }),
   ],
 };

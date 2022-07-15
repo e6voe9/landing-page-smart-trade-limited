@@ -50,6 +50,8 @@
 		left: 192px;
 		&--hidden {
 		}
+		&__lang-change {
+		}
 		&__inner {
 			max-width: 306px;
 		}
@@ -400,6 +402,47 @@
 			padding: 16px 32px;
 			border: 1px solid #2269fe;
 			&:hover {
+			}
+		}
+	}
+	.lang-change-block {
+		top: 38px;
+		left: 80px;
+		&__inner {
+		}
+		&__lang-change {
+		}
+	}
+	.lang-change {
+		&--black {
+			.lang-change {
+				&__text {
+				}
+				&__icon {
+					path {
+					}
+				}
+			}
+		}
+		&__head {
+			padding: 8px;
+		}
+		&__icon {
+			margin-left: 6px;
+			width: 16px;
+			height: 16px;
+			path {
+			}
+		}
+		&__text {
+			font-size: 16px;
+		}
+		&__link {
+			padding: 8px 0;
+		}
+		&__body {
+			padding: 8px;
+			&--active {
 			}
 		}
 	}

@@ -118,6 +118,9 @@ const burger = document.querySelector(".burger");
 let isMenuOpened = false;
 let activeMenuIdx = 0;
 
+const langChangeBlock = document.querySelector(".lang-change-block");
+const langChangeDesktop = langChangeBlock.querySelector(".lang-change");
+
 const widthOfTheScreen = window.innerWidth;
 let fullPageSwiper = null;
 let getBodyScrollTop = null;
@@ -168,7 +171,9 @@ if (video && advantages && mission && roadmap && faq && demo && contacts && side
         activeSidebarMenuNameBlock.style.opacity = 0;
         burger.classList.add("burger--white");
         mobSidebarNav.classList.remove("mob-sidebar-nav--background-white");
+        langChangeDesktop.classList.remove("lang-change--black");
       } else {
+        langChangeDesktop.classList.add("lang-change--black");
         mobSidebarNav.classList.add("mob-sidebar-nav--background-white");
         burger.classList.remove("burger--white");
         sidebarNav.classList.remove("sidebar-nav--hidden");
@@ -211,4 +216,15 @@ const toggleMenu = () => {
 burger.addEventListener("click", toggleMenu);
 sidebarNavItems.forEach((item) => {
   item.addEventListener("click", toggleMenu);
+});
+
+const langChanges = document.querySelectorAll(".lang-change");
+
+langChanges.forEach((item) => {
+  const head = item.querySelector(".lang-change__head"),
+    body = item.querySelector(".lang-change__body");
+
+  const headClickHandler = () => body.classList.toggle("lang-change__body--active");
+
+  head.addEventListener("click", headClickHandler);
 });
