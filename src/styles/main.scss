@@ -145,7 +145,7 @@
 		font-weight: 300;
 		font-family: "Normalidad Light Var";
 		font-size: 1.0416666666666665vw;
-		line-height: 1.3541666666666667vw;
+		line-height: 1.5541666666666667vw;
 		text-transform: uppercase;
 		padding: 0.4166666666666667vw 1.5625vw;
 		transition: color 400ms ease-in-out;
@@ -681,6 +681,7 @@
 	width: 100%;
 	max-width: 41.40625vw;
 	margin-right: 15.833333333333332vw;
+	padding-top: 3.2vh;
 	&__info {
 		&:not(:last-child) {
 			margin-bottom: 6.354166666666666vw;
